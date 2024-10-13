@@ -1,0 +1,36 @@
+npm install
+
+npm run dev
+
+กด ctrl + c สองครั้งติดกัน
+
+npm run build
+
+npx serve -s dist
+
+docker login
+
+ใช้เช็คว่าตอนนี้เราใช้ไรล็อกอิน
+docker-credential-desktop list
+
+เอา docker hub ที่ต้องการมา
+docker build -t imsuriyapi/react-docker-test:0.1 .
+
+docker run -d -p 3000:3000 --name react-docker imsuriyapi/react-docker-test3:0.1
+
+ลบ kubectl เพื่อไม่ให้รันแล้วชื่อชนกัน
+kubectl delete all --all
+
+docker ps
+
+ใช้เพื่อเปลี่ยนเส้นทางการ push
+docker tag imsuriyapi/react-docker-test3:0.1 tanet13/react-docker-test3:0.1
+
+docker push tanet13/react-docker-test3:0.1
+
+ต่อไปก็ push ลง github
+git remote -v
+
+git remote remove origin
+
+git -v
